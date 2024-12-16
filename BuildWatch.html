@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildWatch</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=19cf11de-0c91-4970-a1f7-c22cc3704bd0&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+<script src="js/script.js"></script>
+<header id="header" class="header">
+    <div class="header__container">
+        <div class="header__logo">
+            <a class="logo" href="#"><img src="res/img.png" alt=""></a>
+        </div>
+        <div class="search-bar">
+            <button><img class="searchButton" src="res/search.png" width="18" alt=""></button>
+            <label>
+                <input type="text" id="search-input" placeholder="Search..."/>
+            </label>
+        </div>
+
+        <div class="language-selector-down">
+            <div class="language-btn">EN</div>
+            <div class="language-content">
+                <a href="#" data-lang="en" class="en">EN</a>
+                <a href="#" data-lang="ru" class="ru">RU</a>
+                <a href="#" data-lang="ta" class="tat">TA</a>
+            </div>
+        </div>
+    </div>
+    <button class="reg">
+    <a href="php/choose_action.php">
+        <img src="res/reg.svg" width="18" alt="">
+    </a>
+</button>
+</header>
+<main>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <script src="js/lang.js"></script>
+    <div id="monitoring" class="section">
+    <h2 data-lang="monitoring">Monitoring</h2>
+    <p><strong><span data-lang="dataStart">Data start</span>:</strong> <span id="start-date" class="placeholder">—</span></p>
+    <p><strong><span data-lang="dataEnd">Data end</span>:</strong> <span id="end-date" class="placeholder">—</span></p>
+    <p><strong><span data-lang="description">Description</span>:</strong> <span id="description" class="placeholder">—</span></p>
+    <p><strong><span data-lang="messages">Messages</span>:</strong> <span id="messages" class="placeholder">—</span></p>
+    <button id="show-technical-attributes" class="btn" data-lang="showAttributes">Show Technical Attributes</button>
+</div>
+
+
+        <!-- Модальное окно для отображения технических атрибутов -->
+<div id="technical-attributes-modal" class="technical-attributes-modal" style="display: none;">
+    <div class="modal-content">
+        <span id="close-modal" class="close-modal">&times;</span>
+        <p><strong><span data-lang="lastInspectionDate">Last Inspection Date</span>:</strong> <span id="last-inspection-date">—</span></p>
+        <p><strong><span data-lang="nextInspectionDate">Next Inspection Date</span>:</strong> <span id="next-inspection-date">—</span></p>
+        <p><strong><span data-lang="condition">Condition</span>:</strong> <span id="condition">—</span></p>
+        <p><strong><span data-lang="technicalIssues">Technical Issues</span>:</strong> <span id="technical-issues">—</span></p>
+        <p><strong><span data-lang="maintenanceRecords">Maintenance Records</span>:</strong> <span id="maintenance-records">—</span></p>
+        <p><strong><span data-lang="repairHistory">Repair History</span>:</strong> <span id="repair-history">—</span></p>
+        <p><strong><span data-lang="criticalIssues">Critical Issues</span>:</strong> <span id="critical-issues">—</span></p>
+        <p><strong><span data-lang="lastRenovationDate">Last Renovation Date</span>:</strong> <span id="last-renovation-date">—</span></p>
+        <p><strong><span data-lang="nextRenovationPlanned">Next Renovation Planned</span>:</strong> <span id="next-renovation-planned">—</span></p>
+
+        <script src="js/script_modal.js"></script>
+    </div>
+</div>
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-header">
+            <h1>BUILDWATCH</h1>
+            <div class="social-icons">
+                <a href="#"><img src="res/icon-globe.png" alt="Globe"/></a>
+                <a href="#"><img src="res/icon-facebook.png" alt="Facebook"/></a>
+                <a href="#"><img src="res/icon-youtube.png" alt="YouTube"/></a>
+            </div>
+        </div>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <h2>WHO WE ARE</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Available Positions</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>HEAD OFFICE</h2>
+                <ul>
+                    <li><i class="fa fa-map-marker"></i> Address: 80 Preston Rd. Inglewood, New York</li>
+                    <li><i class="fa fa-phone"></i> Call: +7 (880) 555 3535</li>
+                    <li><i class="fa fa-envelope"></i> Email: <a href="mailto:yulyagrihuk@gmail.com">yulyagrihuk@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>OUR EXPERIENCE</h2>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
