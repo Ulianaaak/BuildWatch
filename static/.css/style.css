@@ -1,0 +1,287 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: rgb(144, 192, 170);
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(247, 235, 207, 0.8);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.language-btn, .reg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Установим фиксированную ширину для обеих кнопок */
+    height: 50px; /* Установим одинаковую высоту */
+    background: rgb(144, 192, 170);
+    color: white;
+    border: none;
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.language-btn:hover, .reg:hover {
+    background: rgb(120, 180, 150); /* Изменение цвета при наведении */
+}
+
+/* Убираем лишние внутренние стили у изображения внутри кнопки регистрации */
+.reg a img {
+    padding: 0;
+    margin: auto;
+    max-width: 18px;
+    max-height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+/* Всплывающее меню выбора языка */
+.language-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(144, 192, 170);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.language-selector-down:hover .language-content {
+    display: block;
+}
+
+.language-content a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.language-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Основной контент */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+#map {
+    flex: 70%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header__menu {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header__menu .header__item {
+    list-style: none;
+}
+
+.header__menu .header__link {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: rgba(247, 235, 207, 0.8) ;
+    color: #555;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+.header__menu .header__link:hover {
+    background: #555;
+}
+
+
+#monitoring {
+    background-color: rgba(247, 235, 207, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width:100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#monitoring h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+    font-style: normal;
+}
+
+#monitoring p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+#monitoring p strong {
+    color: #555;
+}
+
+#monitoring .placeholder {
+    color: rgb(144, 192, 170);
+    font-style: italic;
+}
+
+
+/* Подвал */
+.footer {
+    background: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.footer-header {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+
+.technical-attributes-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
